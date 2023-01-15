@@ -1,0 +1,24 @@
+
+#cellContainer
+{
+    display:flex;
+    width:500px;
+    height:500px;
+    border: 2px dashed blue;
+    flex-wrap: wrap;
+
+
+}
+
+.grid-element
+{
+    box-sizing: border-box;
+}
+
+.mainContainer
+{
+    display:flex;
+    max-width: 2000px;
+    justify-content: center;
+
+}
