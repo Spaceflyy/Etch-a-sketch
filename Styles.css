@@ -1,11 +1,21 @@
+html
+{
+    background-color: rgb(200, 200, 200);
+}
 
+h1 
+{
+    text-align: center;
+}
 #cellContainer
 {
     display:flex;
     width:500px;
     height:500px;
-    border: 2px dashed blue;
     flex-wrap: wrap;
+    background-color: white;
+
+
 
 
 }
@@ -21,4 +31,11 @@
     max-width: 2000px;
     justify-content: center;
 
+}
+
+.controlPanel
+{
+    display:flex;
+    flex-direction: column;
+    border: 2px solid red;
 }
