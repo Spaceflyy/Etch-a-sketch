@@ -8,9 +8,14 @@
     <body >
         <h1>Etch-a-Sketch</h1>
         <div class = "mainContainer">
-        <div class = "controlPanel">
-            <button type = "button" class = "size">Canvas Size</button>
+        <div class = "settings">
+            <div class = "sliderContainer">
+                <div>Canvas Size</div>
+                <input type = "range" min = "2" max = "100" value = "16" >
+                <div class = "sliderValue">input</div>
+            </div>
             <button type = "button" class = "clearGrid">Clear</button>
+            <button type = "button" class = "eraser">Eraser</button>
         </div>
         <div id = "cellContainer"></div>
         <script src = "Sketch.js"></script>
