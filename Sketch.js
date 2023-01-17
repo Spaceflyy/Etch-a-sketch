@@ -3,7 +3,8 @@ const DEFAULT_SIZE = 16;
 const value = document.querySelector(".sliderValue");
 
 document.querySelector("button.clearGrid").addEventListener('click',clearGrid);
-document.querySelector("button.eraser").addEventListener('click', toggleEraser);
+const eraser  = document.querySelector("button.eraser");
+eraser.addEventListener('click', toggleEraser);
 
 let eraserToggle = false;
 let currentSize = DEFAULT_SIZE;
@@ -22,10 +23,14 @@ function toggleEraser()
 {
     if(eraserToggle == false)
     {
+
         eraserToggle = true;
+        eraser.classList.add("active");
+
     } else
     {
         eraserToggle = false;
+        eraser.classList.remove("active");
     }
 }
 
@@ -58,8 +63,8 @@ function createGrid(size)
                 } else
                 {
                     cells.style.background = "";
-                }
-            
+                }  
+                          
             });
             cells.style.width = `${500/size}px`;
             cells.style.height = `${500/size}px`;
