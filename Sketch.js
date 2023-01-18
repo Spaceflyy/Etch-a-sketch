@@ -1,6 +1,7 @@
-const slider = document.querySelector("input");
+const slider = document.querySelector(".sliderContainer input");
 const DEFAULT_SIZE = 16;
 const value = document.querySelector(".sliderValue");
+const colourInput = document.querySelector(".settings #colourSelector");
 
 document.querySelector("button.clearGrid").addEventListener('click',clearGrid);
 const eraser  = document.querySelector("button.eraser");
@@ -8,6 +9,7 @@ eraser.addEventListener('click', toggleEraser);
 
 let eraserToggle = false;
 let currentSize = DEFAULT_SIZE;
+
 
 slider.oninput = function ()
 {
@@ -21,6 +23,7 @@ value.textContent = slider.value;
 
 function toggleEraser()
 {
+
     if(eraserToggle == false)
     {
 
@@ -57,13 +60,8 @@ function createGrid(size)
             const cells = document.createElement("div");
             cells.classList.add("grid-element");
             cells.addEventListener('mouseover',()=>{
-                if(!eraserToggle)
-                {
-                    cells.style.background = "black"
-                } else
-                {
-                    cells.style.background = "";
-                }  
+
+                eraserToggle ?  cells.style.background = "" : cells.style.background = colourInput.value;
                           
             });
             cells.style.width = `${500/size}px`;
