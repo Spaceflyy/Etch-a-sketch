@@ -43,6 +43,7 @@ button.active
 .grid-element
 {
     box-sizing: border-box;
+    user-select: none;
 }
 
 .mainContainer
