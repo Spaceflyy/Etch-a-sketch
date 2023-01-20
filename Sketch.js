@@ -65,6 +65,7 @@ function setButtonActive(mode)
         colourBtn.classList.remove('active');
         randomClrBtn.classList.remove('active');
         shadeBtn.classList.add('active');
+        opacity = 0;
 
     }
 }
@@ -79,6 +80,7 @@ function setCurrentMode(newmode)
 
 function clearGrid()
 {
+    opacity =0;
     document.getElementById("cellContainer").innerHTML ="";
     createGrid(currentSize);
 }

@@ -6,26 +6,32 @@
         <meta charset="UTF-8">
     </head>
     <body >
-        <h1>Etch-a-Sketch</h1>
+    <div class= "header">
+        <div>Etch-a-Sketch</div>
+    </div>
         <div class = "mainContainer">
-            
-        <div class = "settings">
-          <input type = "color" id = "colourSelector" name = "colour" value ="#ff0000">
-            <div class = "sliderContainer">
-                <div>Canvas Size</div>
-                <input type = "range" min = "2" max = "100" value = "16" >
-                <div class = "sliderValue">input</div>
+            <div class = "new">
+            <div class = "settings">
+            <input type = "color" id = "colourSelector" name = "colour" value ="#ff0000">
+                <div class = "sliderContainer">
+                    <div>Canvas Size</div>
+                    <input type = "range" min = "2" max = "100" value = "16" >
+                    <div class = "sliderValue">input</div>
+                </div>
+                <button type = "button" class = "clearGrid">Clear</button>
+                <button type = "button" class = "eraser">Eraser</button>
+                <button type = "button" class = "colourMode">Colour Mode</button>
+                <button type = "button" class = "randomColours">Random Colours</button>
+                <button type = "button" class = "shade">Shade</button>
             </div>
-            <button type = "button" class = "clearGrid">Clear</button>
-            <button type = "button" class = "eraser">Eraser</button>
-            <button type = "button" class = "colourMode">Colour Mode</button>
-            <button type = "button" class = "randomColours">Random Colours</button>
-            <button type = "button" class = "shade">Shade</button>
+            <div id = "cellContainer"></div>
 
+            <script src = "Sketch.js"></script>
         </div>
-        <div id = "cellContainer"></div>
-        <script src = "Sketch.js"></script>
-        </div>
+    </div>
+    <div class ="footer">
+        <a href = https://github.com/spaceflyy>&copy www.github.com/spaceflyy</a>
+    </div>
     </body>
 
 </html>
