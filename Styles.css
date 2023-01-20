@@ -8,7 +8,6 @@ body
     height: 100vh;
     margin: 0;
     font-family: Roboto, sans-serif;
-    color: #413F3D;
 }
 
 .header 
@@ -32,13 +31,20 @@ button
     width: 100px;
     padding:5px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    background-color: #F2F1EF;
+    border:1px black solid;
 }
-
-
 button.active
 {
-    background: #697184;
+    background: #413F3D;
+    color: #F2F1EF;
+}
+
+button:active
+{
+    background: #413F3D;
+    color: #F2F1EF;
 }
 
 #cellContainer
@@ -48,6 +54,7 @@ button.active
     height:500px;
     flex-wrap: wrap;
     background-color: white;
+    filter: drop-shadow(0 0 0.75rem black);
 }
 .sliderContainer
 {
@@ -83,10 +90,10 @@ button.active
     align-items: center;
     justify-content: space-around;
     width:200px;
-    padding: 10px;
+    padding: 5px;
     background-color: #B1A6A4; 
     border-radius: 10px;
-    
+    filter: drop-shadow(0 0 0.75rem black);
 
 }
 .new

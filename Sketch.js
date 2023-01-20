@@ -11,11 +11,20 @@ const randomClrBtn = document.querySelector("button.randomColours");
 const shadeBtn = document.querySelector("button.shade");
 
 clearBtn.addEventListener('click',clearGrid);
+eraserBtn.addEventListener('click',() =>{setCurrentMode('eraser')});
+colourBtn.addEventListener('click',() =>{setCurrentMode('colour')});
+randomClrBtn.addEventListener('click', () =>{setCurrentMode('random')});
+shadeBtn.addEventListener('click', () =>{setCurrentMode('shade')});
+
+
+
+
 
 let eraserToggle = false;
 let currentSize = DEFAULT_SIZE;
-let currentMode;
+let currentMode = 'colour';
 let opacity = 0;
+
 
 slider.oninput = function ()
 {
@@ -33,14 +42,15 @@ function setCurrentSize(newSize)
     currentSize = newSize;
 }
 
-eraserBtn.onclick = () =>{setCurrentMode('eraser')};
-colourBtn.onclick = () => {setCurrentMode('colour')};
-randomClrBtn.onclick = () =>{setCurrentMode('random')};
-shadeBtn.onclick = () => {setCurrentMode('shade')};
+
+function setCurrentMode(newmode)
+{
+    currentMode = newmode;
+    setButtonActive(newmode);
+}
 
 function setButtonActive(mode)
 {
-
     if(mode ==='eraser')
     {
         shadeBtn.classList.remove('active');
@@ -69,14 +79,6 @@ function setButtonActive(mode)
 
     }
 }
-
-function setCurrentMode(newmode)
-{
-    currentMode = newmode;
-    setButtonActive(newmode);
-}
-
-
 
 function clearGrid()
 {
